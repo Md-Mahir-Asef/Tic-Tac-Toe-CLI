@@ -78,7 +78,7 @@ function checker(positions, currPlayer, symbol) {
     const case8 = positions[3] == positions[6] && positions[6] == positions[9];
     const winCase = case1 || case2 || case3 || case4 || case5 || case6 || case7 || case8;
     if (winCase) {
-        console.log("\n\n\nCongratulations!! " + currPlayer + "won.");
+        console.log("\n\n\nCongratulations!! " + currPlayer + " won.");
         console.log("Result:");
         board(positions);
         process.exit(0);
