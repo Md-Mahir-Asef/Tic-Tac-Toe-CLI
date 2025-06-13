@@ -1,16 +1,17 @@
 import PromptSync from "prompt-sync";
 import { board, askPosition, checker } from "./utils";
 import { Symbol } from "./types"; 
+import chalk from "chalk";
 
 const prompt = PromptSync();
 
 var positions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 const dashes: string = "------";
-console.log(dashes + "Tic-Tac-Toe" + dashes);
+console.log(dashes + ("Tic-Tac-Toe") + dashes);
 
 board(positions);
-console.log("!Give -1 as an input to Exit!");
+console.log(chalk.red("!")+"Give "+chalk.whiteBright.bold("-1")+" as an input to Exit!");
 const player1 = prompt("What is the name of player 1? ");
 if (player1 == "-1") {
     console.log("Programme has been exited");

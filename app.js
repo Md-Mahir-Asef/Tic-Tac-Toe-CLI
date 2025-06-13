@@ -5,12 +5,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const prompt_sync_1 = __importDefault(require("prompt-sync"));
 const utils_1 = require("./utils");
+const chalk_1 = __importDefault(require("chalk"));
 const prompt = (0, prompt_sync_1.default)();
 var positions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const dashes = "------";
-console.log(dashes + "Tic-Tac-Toe" + dashes);
+console.log(dashes + ("Tic-Tac-Toe") + dashes);
 (0, utils_1.board)(positions);
-console.log("!Give -1 as an input to Exit!");
+console.log(chalk_1.default.red("!") + "Give " + chalk_1.default.whiteBright.bold("-1") + " as an input to Exit!");
 const player1 = prompt("What is the name of player 1? ");
 if (player1 == "-1") {
     console.log("Programme has been exited");
